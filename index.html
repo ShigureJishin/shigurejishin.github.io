@@ -3,28 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的 GitHub 網頁</title>
+  <title>時針的小屋</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <h1>歡迎來到我的網站</h1>
-  </header>
 
-  <nav>
-    <a href="index.html">首頁</a>
-    <a href="about.html">關於我</a>
-    <a href="projects.html">專案</a>
-    <a href="contact.html">聯絡</a>
-  </nav>
+<body class="light">
+  <div class="wrapper">
+    <header>
+      <h1>歡迎來到我的網站</h1>
+      <div class="mode-toggle-container">
+        <button id="mode-toggle">切換模式</button>
+        <button id="mode-toggle1">test</button>
+      </div>
+    </header>
 
-  <main>
-    <h2>網站簡介</h2>
-    <p>測試中。</p>
-  </main>
+    <nav>
+      <a href="index.html">首頁</a>
+      <a href="about.html">關於我</a>
+      <a href="projects.html">專案</a>
+      <a href="contact.html">聯絡</a>
+    </nav>
 
-  <footer>
-    <p>© 2025 - Shigure Jishin</p>
-  </footer>
+    <main>
+      <h2>網站簡介</h2>
+      <p>測試中。</p>
+    </main>
+
+  
+    <footer> <p>© 2025 - Shigure Jishin</p> </footer>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('mode-toggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      document.body.classList.toggle('light');
+    });
+  </script>
+
 </body>
 </html>
