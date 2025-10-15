@@ -40,7 +40,7 @@ nav a:hover {
 
 main {
   max-width: 800px;
-  padding: 1rem;
+  padding: 2rem 4rem;
   border-radius: 8px;
   /* background: #e6fc69cb; */
 }
@@ -63,7 +63,7 @@ div.friend-list {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  background: #acfad9;
+  /* background: #acfad9; */
 }
 
 div.friend-item a {
@@ -72,9 +72,11 @@ div.friend-item a {
   align-items: center;
   text-decoration: none;
   color: inherit;
-  transition: transform 0.2s;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
+  transition: transform 0.3s;
+  background: rgb(175, 208, 241);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(114, 172, 238, 0.893);
   
 }
 
