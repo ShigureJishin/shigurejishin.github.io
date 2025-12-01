@@ -4,28 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>朋友 - 時針的小屋</title>
+  <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="light">
   <div class="wrapper">
-    <!-- 共用樣式 
-    <header>
-      <h1>歡迎來到我的網站</h1>
-      <div class="mode-toggle-container">
-        <button id="mode-toggle">切換模式</button>
-        <button id="mode-toggle1">test</button>
+    <!-- 頁首 (導覽列) -->
+    <div class = "top">
+      <div class="style-top">
+        <a href="index.html"> <img src="../images/logo.png" alt="Logo" height="50"> </a>
       </div>
-    </header>-->
 
-    <nav>
-      <a href="../index.html">首頁</a>
-      <a href="../about.html">關於我</a>
-      <a href="../projects.html">專案</a>
-      <a href="../contact.html">聯絡</a>
-      <a href="./friends.html">朋友</a>
-    </nav>
+      <div id = "center" class="style-top">
+        <!-- <input id = "searchbox" class = "box" type="text" placeholder="搜尋..." />
+        <button id = "searchbtn" class = "box" type="button">搜尋</button> -->
+      </div>
+      
+      <div class = "container">
+        <nav class="style-top">
+          <a href="../index.html">首頁</a>
+          <a href="../about.html">關於我</a>
+          <a href="../projects.html">專案</a>
+          <a href="../contact.html">聯絡</a>
+          <a href="friends.html">朋友</a>
+        </nav>
 
-    <div class="container">
+        <button id="theme-toggle" class="icon-button theme-toggle" type="button">
+            <span class="moon-icon">&#x1F319;</span> </button>
+      </div>
+    </div>
+
+    <div class="friend-container">
       <main>
         <h2>朋友</h2>
         <p>這裡是朋友頁面，介紹我的朋友們。</p>
@@ -46,7 +55,7 @@
   </div>
 
   <script>
-    const toggleBtn = document.getElementById('mode-toggle');
+    const toggleBtn = document.getElementById('theme-toggle');
     toggleBtn.addEventListener('click', () => {
       document.body.classList.toggle('dark');
       document.body.classList.toggle('light');

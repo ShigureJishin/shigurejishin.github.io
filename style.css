@@ -8,6 +8,13 @@ html, body {
   display: flex;
   flex-direction: column;
 }
+
+.container {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+}
+
 /* 共用樣式 */
 body {
   font-family: Arial, sans-serif;
@@ -21,20 +28,60 @@ header, footer {
   padding: 1rem;
 }
 
-nav {
+/* 頁首 (導覽列) */
+div.top {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
   background: #444;
 }
 
-nav a {
+button.theme-toggle {
+  /* 重置瀏覽器預設按鈕樣式 */
+  all: unset; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 40px;  
+  height: 40px;
+  border-radius: 50%; /* 圓形 */
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  
+  /* 其他屬性 */
+  cursor: pointer; 
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+/* 懸停效果 */
+button.theme-toggle:hover {
+  background-color: #93faa7;
+  border-color: #71ee73;
+}
+
+/* 按下效果 */
+button.theme-toggle:active {
+  transform: scale(0.98);
+}
+
+/* 圖示樣式 (讓月亮圖示大一點) */
+button.theme-toggle .moon-icon {
+  font-size: 20px;
+}
+
+nav.style-top{
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav.style-top a {
   color: white;
   padding: 0.8rem 1.2rem;
   text-decoration: none;
-}
-
-nav a:hover {
-  background: #666;
 }
 
 main {
